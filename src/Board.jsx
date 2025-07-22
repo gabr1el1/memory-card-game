@@ -1,5 +1,9 @@
 import { useState, useEffect } from "react";
 import { charactersInformation } from "./characters"
+import aotUrl from "./assets/aot-logo.png"
+import onepieceUrl from "./assets/one-piece-logo.png"
+import narutoUrl from "./assets/naruto-logo.png"
+<ase></ase>
 function Board() {
     const [franchise, setFranchise] = useState(null)
     const [charactersInfo, setCharacters] = useState(charactersInformation) //all characters objects info
@@ -7,6 +11,7 @@ function Board() {
     const [score, setScore] = useState(0)
     const [bestScore, setBestScore] = useState(0)
     let characters = []
+    let logoUrl = "";
     useEffect(
         () => {
             if(franchise!==null){
@@ -53,6 +58,15 @@ function Board() {
 
     if (franchise !== null) {
         characters = shuffle(charactersInfo[franchise].characters)
+
+        if(franchise=='naruto'){
+            logoUrl = narutoUrl
+        }else if(franchise=='aot'){
+            logoUrl = aotUrl
+        }else{
+            logoUrl = onepieceUrl
+        }
+
     }
 
     function selectCard(name) {
@@ -85,9 +99,7 @@ function Board() {
                         <div>Best Score: {bestScore}</div>
                     </div>
                     
-                   
-                    
-                    <img src={'./src/assets/'+franchise+'-logo.png'} className={"logo "+franchise}  alt="" />
+                    <img src={logoUrl} className={"logo "+franchise}  alt="" />
                 </div>
                 
                 <div className="card-wrapper">
