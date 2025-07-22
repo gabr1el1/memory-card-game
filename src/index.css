@@ -3,17 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
-body{
+
+body {
   transition: all 0.5s ease;
 }
 
-:root.aot{
+:root.aot {
   --game-bg: url(./assets/aot-bg.jpg) center/cover no-repeat fixed;
   --game-outline: thick solid silver;
   --font-family: aot;
 }
 
-:root.one-piece{
+:root.one-piece {
   --game-bg: url(./assets/onepiece-bg.webp) center/cover no-repeat fixed;
   --game-outline: thick solid blue;
   --border-image-source: url('./assets/wanted.jpeg');
@@ -26,7 +27,7 @@ body{
   --font-family: one-piece;
 }
 
-:root.naruto{
+:root.naruto {
   --game-bg: url(./assets/naruto-bg.webp) center/cover no-repeat fixed;
   --game-outline: thick solid orange;
   --border-width: 30px 15px 20px 80px;
@@ -48,18 +49,26 @@ body {
   flex-direction: column;
 }
 
-.info{
+.board {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.score{
+
+.info {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+}
+
+.score {
   display: block;
   position: absolute;
   right: 10px;
 }
 
-.score div{
+.score div {
   color: white;
   font-size: 2em;
   text-shadow: -3px 4px 5px black;
@@ -71,6 +80,7 @@ body {
 
 
 .card-wrapper {
+  flex: 2;
   display: grid;
   grid-template-areas: 'card card card'
     'card card card'
@@ -90,7 +100,7 @@ body {
 }
 
 
-body{
+body {
   background: var(--game-bg)
 }
 
@@ -190,31 +200,34 @@ body{
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.option-menu{
+
+.option-menu {
   font-size: 3em;
 }
+
 .option-menu div:hover {
   font-size: 2em;
 }
 
 
-.option-menu div{
+.option-menu div {
   transition: all 0.3s ease;
 }
-.option-menu .naruto:hover{
+
+.option-menu .naruto:hover {
   font-family: naruto;
   text-shadow: 2px 2px navy;
   color: darkorange;
 }
 
-.option-menu .one-piece:hover{
+.option-menu .one-piece:hover {
   font-family: onepiece;
   text-shadow: 2px 2px blue;
   color: red;
 }
 
 
-.option-menu .aot:hover{
+.option-menu .aot:hover {
   font-family: aot;
 }
 
