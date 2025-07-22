@@ -64,7 +64,7 @@ body {
 .info {
   display: flex;
   justify-content: center;
-  flex: 2;
+  flex: 1;
 }
 
 .score {
@@ -85,7 +85,7 @@ body {
 
 
 .card-wrapper {
-  flex: 2;
+  flex: 3;
   display: grid;
   grid-template-areas: 'card card card'
     'card card card'
