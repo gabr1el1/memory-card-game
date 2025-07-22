@@ -93,12 +93,16 @@ function Board() {
         franchise == null ? <OptionMenu onChooseFranchise={setFranchise}></OptionMenu> :
             <div className={franchise+" "+"board"}>
                 <div className="info">
-                    <i className="fa-solid fa-arrow-left back" onClick={()=>backToMenu()}></i>
-                    <div className="score">
-                        <div>Score: {score}</div>
-                        <div>Best Score: {bestScore}</div>
-                    </div>
                     
+                        <i className="fa-solid fa-arrow-left back" onClick={()=>backToMenu()}></i>
+                        <div className="score">
+                            <div>Score: {score}</div>
+                            <div>Best Score: {bestScore}</div>
+                        </div>
+                    
+                    
+                </div>
+                <div className="logo-wrap">
                     <img src={logoUrl} className={"logo "+franchise}  alt="" />
                 </div>
                 

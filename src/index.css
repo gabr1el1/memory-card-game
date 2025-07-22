@@ -48,12 +48,14 @@ body {
   display: flex;
   flex-direction: column;
 }
-#root{
+
+#root {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
+
 .board {
   flex: 1;
   display: flex;
@@ -62,21 +64,27 @@ body {
 }
 
 
-.info {
+.board .info {
   display: flex;
-  justify-content: center;
-  flex: 1;
-}
-
-.score {
-  display: block;
-  position: absolute;
-  right: 10px;
-}
-
-.score div {
+  justify-content: space-between;
+  align-items: center;
   color: white;
-  font-size: 2em;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.board .logo-wrap{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 5px;
+}
+
+.logo im
+
+.score * {
+  color: white;
+  font-size: 1.5em;
   text-shadow: -3px 4px 5px black;
 }
 
@@ -155,10 +163,7 @@ body {
 }
 
 .back {
-  position: absolute;
-  left: 50px;
-  top: 0;
-  margin: 5px;
+  
   transition: color ease 0.3s, font-size ease 0.5s;
   color: white;
   text-shadow: -3px 3px 2px black;
