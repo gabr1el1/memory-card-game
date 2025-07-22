@@ -1,0 +1,228 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  transition: all 0.5s ease;
+}
+
+:root.aot{
+  --game-bg: url(./assets/aot-bg.jpg) center/cover no-repeat fixed;
+  --game-outline: thick solid silver;
+  --font-family: aot;
+}
+
+:root.one-piece{
+  --game-bg: url(./assets/onepiece-bg.webp) center/cover no-repeat fixed;
+  --game-outline: thick solid blue;
+  --border-image-source: url('./assets/wanted.jpeg');
+  --border-image-slice: 20% 9%;
+  --border-image-width: 1.8 1 2.5 1;
+  --border-style: solid;
+  --border-width: 25px;
+  --text-shadow: 2px 2px blue;
+  --color: red;
+  --font-family: one-piece;
+}
+
+:root.naruto{
+  --game-bg: url(./assets/naruto-bg.webp) center/cover no-repeat fixed;
+  --game-outline: thick solid orange;
+  --border-width: 30px 15px 20px 80px;
+  --border-image-source: url('./assets/naruto-scroll.png');
+  --border-image-slice: 15% 8% 20% 32%;
+  --border-image-width: 1.8 1 2.5 1;
+  --text-shadow: 2px 2px navy;
+  --color: darkorange;
+  --font-family: naruto;
+}
+
+
+html,
+body {
+  min-width: 100vw;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+}
+
+.score{
+  display: block;
+  position: absolute;
+  right: 10px;
+}
+
+.score div{
+  color: white;
+  font-size: 2em;
+  text-shadow: -3px 4px 5px black;
+}
+
+.option-menu {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+
+.card-wrapper {
+  display: grid;
+  grid-template-areas: 'card card card'
+    'card card card'
+    'card card card';
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.card {
+  flex: 1;
+  grid-area: 'card';
+  position: relative;
+  transition: outline ease 0.2s;
+  box-shadow: -5px 3px 10px 0px rgb(42, 41, 41);
+}
+
+
+body{
+  background: var(--game-bg)
+}
+
+.card:hover {
+  outline: thick solid orange;
+}
+
+.card:hover {
+  outline: var(--game-outline);
+}
+
+
+
+.card {
+  padding: 0px;
+  border-style: solid;
+  border-width: var(--border-width);
+  border-image-source: var(--border-image-source);
+  border-image-slice: var(--border-image-slice);
+  border-image-width: var(--border-image-width);
+  text-shadow: var(--text-shadow);
+  color: var(--color);
+  -webkit-text-stroke: 0.1px darkgoldenrod;
+  font-family: var(--font-family);
+}
+
+
+.card .character-name {
+  position: relative;
+  font-size: 1.3em;
+  text-align: center;
+  top: 94%;
+}
+
+
+
+
+.card img {
+  width: 100%;
+  height: 85%;
+  border-radius: 5px;
+}
+
+.logo {
+  width: 200px;
+}
+
+.back {
+  position: absolute;
+  left: 50px;
+  top: 0;
+  margin: 5px;
+  transition: color ease 0.3s, font-size ease 0.5s;
+  color: white;
+  text-shadow: -3px 3px 2px black;
+  font-size: 2em;
+}
+
+.back:hover {
+  font-size: 2.5em;
+  color: red;
+}
+
+@font-face {
+  font-family: naruto;
+  src: url(./assets/naruto.ttf);
+}
+
+@font-face {
+  font-family: onepiece;
+  src: url(./assets/onepiece.ttf),
+
+}
+
+@font-face {
+  font-family: aot;
+  src: url(./assets/aot.ttf);
+}
+
+.card-wrapper {
+  font-family: naruto;
+
+}
+
+.one-piece .card-wrapper {
+  font-family: onepiece;
+  letter-spacing: 5px;
+}
+
+.aot .card-wrapper {
+  font-family: aot;
+}
+
+.option-menu div,
+.card,
+.back {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.option-menu{
+  font-size: 3em;
+}
+.option-menu div:hover {
+  font-size: 2em;
+}
+
+
+.option-menu div{
+  transition: all 0.3s ease;
+}
+.option-menu .naruto:hover{
+  font-family: naruto;
+  text-shadow: 2px 2px navy;
+  color: darkorange;
+}
+
+.option-menu .one-piece:hover{
+  font-family: onepiece;
+  text-shadow: 2px 2px blue;
+  color: red;
+}
+
+
+.option-menu .aot:hover{
+  font-family: aot;
+}
+
+
+/*
+@media screen and (max-width:992px) {
+  body {
+    background-color: blue;
+  }
+}
+  */
